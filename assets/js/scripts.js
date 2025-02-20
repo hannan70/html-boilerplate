@@ -103,67 +103,7 @@ Version      : 1.0
 			
 	},
 	});
-	
-	new Swiper(".testmonial", {
-	slidesPerView: 2,
-	spaceBetween: 30,
-	loop: true,
-	speed: 2000,
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-	autoplay: {
-		enabled: true,
-		delay: 2000,
-	},
-	breakpoints: {
-		1200: {
-			slidesPerView: 2,
-		},
-		1199: {
-			slidesPerView: 1,
-		},
-		576: {
-			slidesPerView: 1,
-		} ,
-		320: {
-			slidesPerView: 1,
-		} 
-	},
-	});
-	new Swiper(".client_logo", {
-	slidesPerView: 5,
-	spaceBetween: 30,
-	loop: true,
-	speed: 2000,
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-	autoplay: {
-		enabled: true,
-		delay: 2000,
-	},
-	breakpoints: {
-		320: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-		640: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		}, 
-		1024: {
-			slidesPerView: 4,
-			spaceBetween: 50,
-		},
-		1200: {
-			slidesPerView: 5,
-			spaceBetween: 50,
-		},
-	},
-	});
+	 
 
 	/*END SWIPER JS*/	
 
@@ -202,14 +142,14 @@ Version      : 1.0
 	 
 
 	$(document).ready(function(){
-		$(".header-item-right span").click(function(){
-		$(".header-item-right").toggleClass("hhhh");
-			$(".header-bottom").toggleClass("open");
+		$(".mobile_menu_top_right span").click(function(){
+		$(".mobile_menu_top_right").toggleClass("hhhh");
+			$(".mobile_menu_bottom").toggleClass("open");
 		});
 	});
 		
-	$(".header-menu ul li ul").parent("li").addClass("m");
-	$('.header-menu ul li a').on('click', function(e) {
+	$(".main_mobile_menu ul li ul").parent("li").addClass("m");
+	$('.main_mobile_menuul li a').on('click', function(e) {
 		var element = $(this).parent('li');
 		if (element.hasClass('open')) {
 			element.removeClass('open');
@@ -226,77 +166,6 @@ Version      : 1.0
 		}
 	});		
 
-	// listing image upload
-	let fileinput = document.querySelector('.listing_file_up')
-	let form = document.querySelector('.upload_wrapper')
-
-	form?.addEventListener("click", function(){
-		fileinput.click();
-	})
-
-	$('#list_view').click(function() {
-		$("#active_grid_view_inner").addClass("d-none")
-		$("#active_list_view_inner").removeClass("d-none")
-		$(this).addClass("grid_active")
-		$("#grid_view").removeClass("grid_active")
-	})
-
-	$('#grid_view').click(function() {
-		$("#active_grid_view_inner").removeClass("d-none")
-		$("#active_list_view_inner").addClass("d-none")
-		$(this).addClass("grid_active")
-		$("#list_view").removeClass("grid_active")
-	})
- 
-
-	$('.gallerys').magnificPopup({
-		delegate: 'a', // child items selector, by clicking on it popup will open
-		type: 'image',
-		gallery: {
-			enabled: true
-		},
-	});
-
-	// payment method jQuery 
-	$("#paypal_btn").click(function() { 
-		$("#paypal").addClass("d-block")
-		$("#paypal").removeClass("d-none")
-		$("#credit_card").addClass("d-none") 
-		$("#credit_card").removeClass("d-block") 
-		$("#bank_transfer").addClass("d-none")
-		$("#bank_transfer").removeClass("d-block")
-		// active tab
-		$("#paypal_btn").addClass("active_payment")
-		$("#credit_card_btn").removeClass("active_payment") 
-		$("#bank_transfer_btn").removeClass("active_payment")
-
-	})
-	$("#credit_card_btn").click(function() {
-		$("#credit_card").addClass("d-block") 
-		$("#credit_card").removeClass("d-none") 
-		$("#paypal").addClass("d-none")
-		$("#paypal").removeClass("d-block") 
-		$("#bank_transfer").addClass("d-none")
-		$("#bank_transfer").removeClass("d-block")
-		// active tab
-		$("#paypal_btn").removeClass("active_payment")
-		$("#credit_card_btn").addClass("active_payment") 
-		$("#bank_transfer_btn").removeClass("active_payment")
-	})
-	// payment tab
-	$("#bank_transfer_btn").click(function() { 
-		$("#bank_transfer").addClass("d-block")
-		$("#bank_transfer").removeClass("d-none")
-		$("#paypal").addClass("d-none")
-		$("#paypal").removeClass("d-block")
-		$("#credit_card").addClass("d-none")
-		$("#credit_card").removeClass("d-block")
-		// active tab
-		$("#paypal_btn").removeClass("active_payment")
-		$("#credit_card_btn").removeClass("active_payment") 
-		$("#bank_transfer_btn").addClass("active_payment")
-	})
-	// payment method jQuery 
 
 })(jQuery);
 

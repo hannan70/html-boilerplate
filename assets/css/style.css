@@ -165,6 +165,55 @@ a {
   background-color: #fff;
 }
 
+.mobile_menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+}
+.mobile_menu .mobile_menu_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #D42F53;
+  padding: 18px;
+}
+.mobile_menu .mobile_menu_top .mobile_menu_top_left .mobile_logo {
+  width: 130px;
+  height: auto;
+}
+.mobile_menu .mobile_menu_top .mobile_menu_top_right span i {
+  font-size: 30px;
+  color: #fff;
+}
+.mobile_menu .mobile_menu_top .mobile_menu_top_right span i.fa-solid.fa-xmark {
+  display: none;
+}
+.mobile_menu .mobile_menu_top .mobile_menu_top_right .hhhh span i {
+  display: none;
+}
+.mobile_menu .mobile_menu_top .mobile_menu_top_right .hhh span i.fa-solid.fa-xmark {
+  display: block;
+}
+.mobile_menu .mobile_menu_bottom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  background: #f8fafe;
+  width: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0 20px;
+  padding-bottom: 60px;
+  transition: all 0.3s ease;
+}
+.mobile_menu .mobile_menu_bottom.open {
+  transform: scaleY(1);
+}
 /* @@@@@@@@@@@@@  Footer Section Start Here  @@@@@@@@@@@@@@ */
 
 /*# sourceMappingURL=style.css.map */
