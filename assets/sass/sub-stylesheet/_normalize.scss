@@ -18,11 +18,6 @@ h5 {font-size: $fs-h5;margin-top: -5px;}
 h6 {font-size: $fs-h6;}
 
 
-img {
-	height: auto;
-	max-width: 100%;
-}
-
 @include breakpoint(sm) {
 	h1 {font-size: $fs-h1;line-height: $lh-h1;}
 	

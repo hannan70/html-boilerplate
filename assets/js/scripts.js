@@ -70,41 +70,7 @@ Version      : 1.0
 		},
 	});
 	  
-	new Swiper(".popular_listing", {
-	slidesPerView: 3,
-	spaceBetween: 30,
-	loop: true,
-	speed: 3000,
-	autoplay: {
-		enabled: true,
-		delay: 2000,
-	},
-	pagination: {
-		el: ".swiper-pagination",
-		clickable: true,
-	},
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 20,
-		},
-		640: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		}, 
-		1024: {
-			slidesPerView: 3,
-			spaceBetween: 50,
-		},
-		1200: {
-			slidesPerView: 3,
-			spaceBetween: 50,
-		},
-			
-	},
-	});
-	 
-
+	  
 	/*END SWIPER JS*/	
 
 	var fixed_top = $("#menu_section");
@@ -143,13 +109,13 @@ Version      : 1.0
 
 	$(document).ready(function(){
 		$(".mobile_menu_top_right span").click(function(){
-		$(".mobile_menu_top_right").toggleClass("hhhh");
+		$(".mobile_menu_top_right").toggleClass("close");
 			$(".mobile_menu_bottom").toggleClass("open");
 		});
 	});
 		
-	$(".main_mobile_menu ul li ul").parent("li").addClass("m");
-	$('.main_mobile_menuul li a').on('click', function(e) {
+	$(".main_mobile_menu ul li ul").parent("li").addClass("mobile_drowpdown");
+	$('.main_mobile_menu ul li a').on('click', function(e) {
 		var element = $(this).parent('li');
 		if (element.hasClass('open')) {
 			element.removeClass('open');

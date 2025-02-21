@@ -4,14 +4,17 @@
     top: 0;
     left: 0;
     z-index: 9999999999;
+    @include breakpoint(lg) {
+        display: none;
+    }
     .mobile_menu_top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         background: $theme-color;
-        padding: 18px;
+        padding: 18px 40px;
         .mobile_menu_top_left {
-            .mobile_logo {
+            .mobile_logo img {
                 width: 130px;
                 height: auto;
             }
@@ -26,14 +29,14 @@
                     }
                 }
             }
-            .hhhh {
+            &.close {
                 span {
-                    i {
+                    i.fa-solid.fa-bars-staggered {
                         display: none;
                     }
                 }
             }
-            .hhh {
+            &.close {
                 span {
                     i {
                         &.fa-solid.fa-xmark {
@@ -46,7 +49,6 @@
     }
     .mobile_menu_bottom {
         position: fixed;
-        top: 0;
         left: 0;
         z-index: 999999999;
         background: $ash-color;
@@ -57,20 +59,62 @@
         overflow-y: scroll;
         padding: 0 20px;
         padding-bottom: 60px;
-        transition: all 0.3s ease;
+        @include transition($transition);
         &.open {
             transform: scaleY(1);
         }
         .main_mobile_menu {
-            ul {
+            background-color: $ash-color;
+            > ul {
+                padding-top: 20px;
                 li {
-                    a {
-
+                    list-style: none;
+                    border-bottom: 1px solid $mb-border;
+                    padding: 18px 0px;
+                    margin: 0px 25px;
+                    &:last-child {
+                        border-bottom: none;
                     }
-                    ul {
+                    &.mobile_drowpdown {
+                        position: relative;
+                        > a {
+                            &::after {
+                                top: 16px;
+                                right: 0;
+                                font-weight: 700;
+                                content: "\f078";
+                                font-family: "Font Awesome 5 Free";
+                                @include transition($transition);
+                                position: absolute;
+                            }
+                        }
+                        &.open {
+                            > a {
+                                &::after {
+                                    @include transform(rotate(180deg));
+                                    @include transition($transition); 
+                                    color: $theme-color;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        font-size: $fs-18;
+                        font-weight: 500;
+                        color: $title-color;
+                        text-decoration: none;
+                        display: block;
+                    }
+                    
+                    ul { 
+                        //padding-top: 0px;
+                        display: none;
                         li {
-                            a {
-
+                            &:last-child {
+                                padding-bottom: 0px;
+                            }
+                            > a {
+                                font-size: $fs-h6;
                             }
                         }
                     }
@@ -78,8 +122,10 @@
             }
         }
         .mobile_menu_btn {
+            text-align: center;
+            margin-top: 30px;
             a {
-
+                @include button-style($theme-color, $white-color);
             }
         }
     }
