@@ -11,20 +11,19 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 48px;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 h5 {
   font-size: 20px;
-  margin-top: -5px;
 }
 
 h6 {
@@ -70,9 +69,22 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .header_section {
   background-color: #D42F53;
   padding: 24px 0px;
+}
+.header_section.sticky-menu {
+  background-color: #D42F53;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999999999999 !important;
 }
 .header_section .header_inner .primary_menu ul li:not(.sub_menu li) {
   position: relative;
@@ -340,7 +352,6 @@ a {
   margin-bottom: 35px;
   position: relative;
   padding-bottom: 12px;
-  font-size: 30px;
   font-weight: 700;
 }
 .footer_section .footer_top .footer_area .footer_title h4::after {
@@ -379,8 +390,7 @@ a {
 .footer_section .footer_top .footer_area .footer_title .footer_list ul li .address .address_icon {
   margin-right: 10px;
 }
-.footer_section .footer_top .footer_area .footer_title .footer_list ul li .address .address_para h3 {
-  font-size: 20px;
+.footer_section .footer_top .footer_area .footer_title .footer_list ul li .address .address_para h5 {
   font-weight: 600;
 }
 .footer_section .footer_top .footer_area .footer_title .footer_list ul li .address .address_para p {

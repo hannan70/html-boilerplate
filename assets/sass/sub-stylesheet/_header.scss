@@ -1,6 +1,14 @@
 .header_section {
     background-color: $theme-color;
     padding: 24px 0px;
+    &.sticky-menu {
+        background-color: $theme-color;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9999999999999 !important;
+    }
     .header_inner {
         .logo { }
         .primary_menu {

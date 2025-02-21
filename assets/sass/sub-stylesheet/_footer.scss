@@ -67,8 +67,7 @@
                 h4 {
                     margin-bottom: 35px;
                     position: relative;
-                    padding-bottom: 12px;
-                    font-size: $fs-h4;
+                    padding-bottom: 12px; 
                     font-weight: 700;
                     &::after {
                         position: absolute;
@@ -107,8 +106,7 @@
                                     }
                                 }
                                 .address_para {
-                                    h3 {
-                                        font-size: $fs-h5;
+                                    h5 { 
                                         font-weight: 600;
                                     }
                                     p {
@@ -129,8 +127,8 @@
         .footer_bottom_content {
             p {
                 color: $white-color;
-                font-size: 16px;
-                word-spacing: 3px;
+                font-size: $fs-h6;
+                word-spacing: 3px; 
                 a {
                     color: $white-color;
                     margin-left: 10px;
