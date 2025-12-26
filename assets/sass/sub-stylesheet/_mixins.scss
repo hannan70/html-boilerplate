@@ -20,6 +20,13 @@
   transform:         $property;
 }
 
+@mixin flexbox(){
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+}
+
+
 // button common style
 @mixin button-style($bg-color, $text-color) {
     font-size: $fs-18;

@@ -37,7 +37,31 @@ li {
 a {
 	text-decoration: none;
 }
-p {
+p, h4, h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
+}
+.mb-100 {
+	margin-bottom: 100px;
+}
+.mt-100 {
+	margin-top: 100px;
+}
+.my-100 {
+	margin: 100px 0px;
+}
+.m-100 {
+	margin: 100px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+.mb-30 {
+	margin-bottom: 30px;
 }
